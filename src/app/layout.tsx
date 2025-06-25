@@ -1,5 +1,5 @@
-import type { Metadata } from "next";
-import "./globals.css";
+import type { Metadata } from 'next';
+import './globals.css';
 
 //layout recebe children
 //layout e page inicial sao obrigatorios
@@ -8,8 +8,8 @@ import "./globals.css";
 //o children é um children que vem de page
 
 export const metadata: Metadata = {
-  title: "The blog este é um blog next js",
-  description: "Descricao da pagina next app",
+  title: 'The blog este é um blog next js',
+  description: 'Descricao da pagina next app',
 };
 
 type RootLayoutProps = {

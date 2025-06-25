@@ -1,10 +1,12 @@
-import { Header } from "@/components/Header";
+import { SpinLoader } from '@/components/SpinLoader';
+import { postRepository } from '@/repositories/post';
 
 export default async function HomePage() {
-  console.log("Home page");
+  const posts = await postRepository.findAll();
+
   return (
     <div>
-      <Header />
+      <SpinLoader className={'min-h-[500PX] bg-amber-500'} />
     </div>
   );
 }
