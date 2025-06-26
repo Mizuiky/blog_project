@@ -7,7 +7,7 @@
   "editor.glyphMargin": true,
   "workbench.activityBar.location": "default",
   "editor.lineNumbers": "on",
-  "files.eol": "\n", // Final de linha sempre será LF
+  "files.eol": "\n",
   "workbench.editor.labelFormat": "short",
   "editor.tabSize": 2,
   "explorer.compactFolders": false,
@@ -23,12 +23,21 @@
     ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
   ],
 
-  // 🛠 Formatação e Lint
+  // 🛠 Formatação e Lint - CONFIGURAÇÃO CORRIGIDA
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "prettier.singleQuote": true,
 
+  // Configurações do Prettier
+  "prettier.singleQuote": true,
+  "prettier.jsxSingleQuote": true,
+  "prettier.semi": true,
+  "prettier.trailingComma": "es5",
+  "prettier.arrowParens": "avoid",
+  "prettier.endOfLine": "lf",
+
+  // IMPORTANTE: Primeiro executa Prettier, depois ESLint
   "editor.codeActionsOnSave": {
+    "source.formatDocument": "explicit",
     "source.fixAll.eslint": "explicit"
   },
 
@@ -38,6 +47,12 @@
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   "[xml]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
@@ -45,6 +60,9 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
   "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   }
 }
